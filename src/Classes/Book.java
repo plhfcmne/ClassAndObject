@@ -29,7 +29,7 @@ public class Book {
 
     public void printInfo() {
         System.out.println("Название книги: " + getTitle() + ", год издания " + getPublishingYear()+"г., автор: "+getAuthor().getName()+
-                " "+getAuthor().getSurname());
+                "  "+getAuthor().getSurname());
 
     }
 
