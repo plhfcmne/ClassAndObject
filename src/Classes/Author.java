@@ -1,6 +1,6 @@
 package Classes;
 
-public class Author {
+public class Author{
    final String name;
    final String surname;
 
