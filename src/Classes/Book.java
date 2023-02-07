@@ -1,5 +1,7 @@
 package Classes;
 
+import java.util.Objects;
+
 public class Book {
     final String title;
     final Author author;
@@ -27,10 +29,29 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
-    public void printInfo() {
-        System.out.println("Название книги: " + getTitle() + ", год издания " + getPublishingYear()+"г., автор: "+getAuthor().getName()+
-                " "+getAuthor().getSurname());
+    @Override
+    public String toString() {
+        return "Название книги: " + getTitle() + ", год издания " + getPublishingYear() + "г., автор: " + getAuthor().getName() +
+                " " + getAuthor().getSurname();
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Book book = (Book) o;
+        return publishingYear == book.publishingYear && title.equals(book.getTitle())
+                && author.equals(book.getAuthor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, publishingYear, author);
     }
 
 }
