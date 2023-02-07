@@ -10,10 +10,15 @@ public class Main {
         Book londa = new Book("Londa-londa", personOne, 2014);
         Book forYourNewGuy = new Book("Твоему новому парню", personTwo, 2018);
         Book letThemDie = new Book("Пусть они умрут", personThree, 2019);
-        londa.printInfo();
-        forYourNewGuy.printInfo();
-        letThemDie.printInfo();
+        //londa.printInfo();
+        //forYourNewGuy.printInfo();
+        //letThemDie.printInfo();
         londa.setPublishingYear(2012);
-        londa.printInfo();
+        //londa.printInfo();
+        System.out.println(forYourNewGuy);
+        System.out.println(londa);
+        System.out.println(letThemDie);
+        System.out.println(personOne.equals(personTwo));
+        System.out.println(forYourNewGuy.hashCode());
     }
 }
